@@ -1,0 +1,22 @@
+'''e. The  following  is  pseudocode  for  a  program  being  designed.  Write  the 
+Python program equivalent of the same. 
+BEGIN 
+ SET x TO 0, y TO 20 
+ REPEAT 
+    SUBTRACT 4 FROM y 
+    ADD 2/y TO x 
+ UNTIL 
+  y IS LESS THAN 6 
+ DISPLAY x 
+END'''
+
+# Setting Variables X and Y
+x = 0
+y = 20
+# Loop
+while y >= 6:
+    y = y - 4
+    x = x + (2/y)
+
+print(x)
+# print(y)

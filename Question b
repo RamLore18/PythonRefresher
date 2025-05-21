@@ -1,0 +1,19 @@
+'''b. Write  a  program  that  asks  a  user  to  input  the  radius  then  the  program 
+calculates  the  volume  of  a  sphere  (the  formula  for  the  volume  is  4
+3 πr3). 
+Use the exponential operator in python to compute (r3).'''
+
+import math # To use variable math.pi
+radius = float(input("Please input the radius: "))
+# Exception Handling
+while radius < 0:    
+    try:
+        if radius < 0:
+            raise ValueError("The radius cannot be negative.")
+    except ValueError as e:
+        print(e)
+        radius = float(input("Please input the radius: "))
+
+volume = (4/3) * math.pi * (radius ** 3)
+# Output the volume upto 2 decimal places
+print(f"The volume of the sphere with radius {radius} is {volume:.2f}.")

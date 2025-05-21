@@ -1,0 +1,19 @@
+'''d. Write  a  program  using  functions  that  determines  whether  a  character 
+input by a user is uppercase or lower case.'''
+
+chr = input("Please input a character: ")
+
+# Exception handling
+while len(chr) != 1:
+    try:
+        if len(chr) != 1:
+            raise ValueError("Please input a single character.")
+    except ValueError as e:
+        print(e)
+        chr = input("Please input a character: ")
+    
+# Determination of upper or lowercase use
+if chr.isupper():
+    print(f"The character '{chr}' is uppercase.")
+elif chr.islower():
+    print(f"The character '{chr}' is lowercase.")

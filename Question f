@@ -1,0 +1,16 @@
+'''f. Write a Python program that does the following: 
+i. Uses a loop for a user to continually input 5 values to populate an 
+array. 
+ii. Calculates  and  displays  the  average  of  the  values  input  into  the 
+array. '''
+import array as arr
+import numpy as np
+# Initializing integer array
+numbers = arr.array('i',[])
+# (i)Loop
+while len(numbers) < 5:
+    value = int(input("Please input a value: "))
+    numbers.append(value)
+
+# (ii)Output
+print(np.mean(numbers))

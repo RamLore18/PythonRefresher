@@ -1,0 +1,23 @@
+'''c. Using functions, write a program to compute the area and perimeter of a 
+square. The program should ask the user to enter a number corresponding  to  the  side  length  of  the  square  and  display  the  area  and perimeter of the square.'''
+
+# Functions
+def calculate_area(length):
+    return length ** 2
+def calculate_perimeter(length):
+    return 4 * length
+
+length = float(input("Please input the length of the side of the square: "))
+# Exception handling
+while length < 0:
+    try:
+        if length < 0:
+            raise ValueError("The length of the side cannot be negative.")
+    except ValueError as e:
+        print(e)
+        length = float(input("Please input the length of the side of the square: "))
+        
+area = calculate_area(length)
+perimeter = calculate_perimeter(length)
+print(f"The area of the square with side length {length} is {area:.2f}.")
+print(f"The perimeter of the square with side length {length} is {perimeter:.2f}.")
